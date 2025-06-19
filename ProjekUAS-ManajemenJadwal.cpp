@@ -10,7 +10,7 @@ struct Pelajaran {
 	//string matkul;
 	string dateline;
 	string tugas;
-	string Pengumuman;
+	string pengumuman;
 };
 
 //Pelajaran daftarTugas[MAX]; woi kalian masih lama gaa,kalau lama otw nih gw | iya masih sampe nanti pemrogramman
@@ -25,6 +25,8 @@ Pelajaran Pemrograman[MAX];
 Pelajaran Komgraf[MAX];
 
 Pelajaran Anouncment[MAX];
+Pelajaran Tanggal[MAX];
+Pelajaran MK[MAX];
 
 int awal = 0;
 int akhir = 0;
@@ -59,60 +61,60 @@ void Input_Tugas() {
 		case 2:
 			//English[akhir].matkul = "Bahasa Inggris";
 			cout << "Masukkan Deadline Tugas (Hari): ";
-			cin >> Komdat[akhir].dateline;
+			cin >> English[akhir].dateline;
 			cin.ignore();
 			cout << "Masukkan Nama Tugas: ";
-			getline(cin, Komdat[akhir].tugas);
+			getline(cin, English[akhir].tugas);
 
 			akhir++;
 			break;
 		case 3:
 			//daftarTugas[akhir].matkul = "Struktur Data";
 			cout << "Masukkan Deadline Tugas (Hari): ";
-			cin >> Komdat[akhir].dateline;
+			cin >> Strudat[akhir].dateline;
 			cin.ignore();
 			cout << "Masukkan Nama Tugas: ";
-			getline(cin, Komdat[akhir].tugas);
+			getline(cin, Strudat[akhir].tugas);
 
 			akhir++;
 			break;
 		case 4:
 			//daftarTugas[akhir].matkul = "Software Hardware";
 			cout << "Masukkan Deadline Tugas (Hari): ";
-			cin >> Komdat[akhir].dateline;
+			cin >> HS[akhir].dateline;
 			cin.ignore();
 			cout << "Masukkan Nama Tugas: ";
-			getline(cin, Komdat[akhir].tugas);
+			getline(cin, HS[akhir].tugas);
 
 			akhir++;
 			break;
 		case 5:
 			//daftarTugas[akhir].matkul = "Sistem Operasi";
 			cout << "Masukkan Deadline Tugas (Hari): ";
-			cin >> Komdat[akhir].dateline;
+			cin >> SO[akhir].dateline;
 			cin.ignore();
 			cout << "Masukkan Nama Tugas: ";
-			getline(cin, Komdat[akhir].tugas);
+			getline(cin, SO[akhir].tugas);
 
 			akhir++;
 			break;
 		case 6:
 			//daftarTugas[akhir].matkul = "Pemrogramman";
 			cout << "Masukkan Deadline Tugas (Hari): ";
-			cin >> Komdat[akhir].dateline;
+			cin >> Pemrograman[akhir].dateline;
 			cin.ignore();
 			cout << "Masukkan Nama Tugas: ";
-			getline(cin, Komdat[akhir].tugas);
+			getline(cin, Pemrograman[akhir].tugas);
 
 			akhir++;
 			break;
 		case 7:
 			//daftarTugas[akhir].matkul = "Komputer Grafis";
 			cout << "Masukkan Deadline Tugas (Hari): ";
-			cin >> Komdat[akhir].dateline;
+			cin >> Komgraf[akhir].dateline;
 			cin.ignore();
 			cout << "Masukkan Nama Tugas: ";
-			getline(cin, Komdat[akhir].tugas);
+			getline(cin, Komgraf[akhir].tugas);
 
 			akhir++;
 			break;
@@ -160,6 +162,51 @@ void tampilData() {
 				cout << "   Deadline: " << English[i].dateline << "\n\n";
 			}
 			break;
+		case 3: //daftarTugas[akhir].matkul = "Strukdat";
+			cout << "Matkul Strukdat\n";
+
+			for (int i = awal; i < akhir; i++) {
+				//cout << i + 1 << ". [" << daftarTugas[i].matkul << "]\n";
+				cout << "   Tugas   : " << Strudat[i].tugas << endl;
+				cout << "   Deadline: " << Strudat[i].dateline << "\n\n";
+			}
+			break;
+		case 4: //daftarTugas[akhir].matkul = "Strukdat";
+			cout << "Matkul Hardware/Software\n";
+
+			for (int i = awal; i < akhir; i++) {
+				//cout << i + 1 << ". [" << daftarTugas[i].matkul << "]\n";
+				cout << "   Tugas   : " << HS[i].tugas << endl;
+				cout << "   Deadline: " << HS[i].dateline << "\n\n";
+			}
+		case 5: //daftarTugas[akhir].matkul = "sistem operasi";
+			cout << "Matkul Sistem Operasi\n";
+
+			for (int i = awal; i < akhir; i++) {
+				//cout << i + 1 << ". [" << daftarTugas[i].matkul << "]\n";
+				cout << "   Tugas   : " << SO[i].tugas << endl;
+				cout << "   Deadline: " << SO[i].dateline << "\n\n";
+			}
+			break;
+			break;
+		case 6: //daftarTugas[akhir].matkul = "Strukdat";
+			cout << "Matkul Pemrograman\n";
+
+			for (int i = awal; i < akhir; i++) {
+				//cout << i + 1 << ". [" << daftarTugas[i].matkul << "]\n";
+				cout << "   Tugas   : " << Pemrograman[i].tugas << endl;
+				cout << "   Deadline: " << Pemrograman[i].dateline << "\n\n";
+			}
+			break;
+			case 7: //daftarTugas[akhir].matkul = "Komputer Grafis";
+			cout << "Matkul Komputer Grafis\n";
+
+			for (int i = awal; i < akhir; i++) {
+				//cout << i + 1 << ". [" << daftarTugas[i].matkul << "]\n";
+				cout << "   Tugas   : " << Komgraf[i].tugas << endl;
+				cout << "   Deadline: " << Komgraf[i].dateline << "\n\n";
+			}
+			break;
 		}
 	}
 	else {
@@ -167,6 +214,7 @@ void tampilData() {
 	}
 
 }
+
 
 void jadwalmatkul() {
 	cout << "========================================================   Jadwal Matkul   ========================================================\n";
@@ -190,20 +238,50 @@ void simpantugas() {
 */
 
 void inputpengumuman(string pengumuman) {
+	//cin.ignore();
+	
+	//Pelajaran tanggal[MAX];
+	//Pelajaran Anouncment[MAX];
+	//Pelajaran mk[MAX];
+
+	//cin.ignore();
+ 	cout << "====================== Lembar pengumuman ======================"<< endl;
+	cout << "Masukkan tanggal : "; cin >> Tanggal[akhir].pengumuman;
+	//getline(cin, Tanggal[akhir].pengumuman);
+	cout << "Masukkan mata kuliah : "; cin >> MK[akhir].pengumuman;
 	cin.ignore();
-	string tanggal;
-	string pengumuman;
-	string matkul;
-	cout << "====================== Lembar pengumuman ======================" << endl;
+	//getline(cin, MK[akhir].pengumuman);
 	cout << "Masukkan Pengumuman : ";
-	getline(cin, Anouncment[ak] pengumuman);
+	getline(cin, Anouncment[akhir].pengumuman);
+
+	//cin.ignore();
+	akhir++;
 }
 
-void outputpengumuman() {
-	for 
-	cout << Anouncment[akhir].Pengumuman;
+void outputpengumuman(){
+	cout << "====================== Lembar pengumuman ======================"<< endl;
+	for (int i = awal; i < akhir; i++){
+		cout << Tanggal[i].pengumuman <<endl;
+		cout << MK[i].pengumuman <<endl;
+		cout << Anouncment[i].pengumuman << endl;
+	}
 }
-voidd remove
+
+void tampiData2(){
+/*Pelajaran Komdat[MAX];
+Pelajaran English[MAX];
+Pelajaran Strudat[MAX];
+Pelajaran HS[MAX];
+Pelajaran SO[MAX];
+Pelajaran Pemrograman[MAX];
+Pelajaran Komgraf[MAX];*/
+}
+
+void remove(){
+	if(!penuh()){
+		
+	}
+}
 
 int main() {
 	int pilihan;
@@ -218,7 +296,7 @@ int main() {
 		cout << "Masukkan Pilihan: ";
 		cin >> pilihan;
 		system("cls");
-
+		
 		switch (pilihan) {
 		case 1:
 			do {
@@ -277,7 +355,7 @@ int main() {
 					system("pause");
 					system("cls");
 					break;
-				case 4:
+				case 4: 
 					outputpengumuman();
 					system("pause");
 					system("cls");
